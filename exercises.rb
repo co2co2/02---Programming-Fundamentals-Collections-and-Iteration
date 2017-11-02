@@ -38,7 +38,7 @@ puts fav_movie[:Closer]
 
 # Exercise 2
 p fav_colours[-1]
-cities[Tokyo:] = 9273000
+cities[:Tokyo] = 9273000
 coin_flips.reverse!
 puts cities[:London]
 fav_artists.each {|x| puts "i think #{x} is great"}
@@ -46,7 +46,7 @@ fav_artists.each {|x| puts "i think #{x} is great"}
 # Exercise 3
 puts fav_artists[0, 2]
 fav_movie.each {|k,v| puts "#{k} came out in #{v}."}
-puts family_age.!sort.!reverse
+puts family_age.sort!.reverse!
 fav_movie[:Beauty_and_The_Beast] =  [1991, 2017]
 
 #Exercise 4
@@ -131,3 +131,38 @@ puts array_not_island
 puts list_countries
 
 # Exercise 7
+
+sum =0
+expenses = [2200, 4543, 903.4, 250.87]
+expenses.each{|e| sum += e}
+puts sum
+
+# Exercise 8
+
+#1.
+grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
+  grocery_list.each {|g| puts "*" + g }
+grocery_list << "rice"
+# add = "*" + g
+
+#2.
+puts grocery_list.count
+
+#3.
+if grocery_list.include?("banana")
+    puts  "You need to pick up bananas"
+  else
+    puts "You don't need to pick up bananas today"
+  end
+
+
+#4.
+puts grocery_list[1]
+
+#5.
+grocery_list.sort
+tidy_list = grocery_list.sort.each {|g| puts "*" + g }
+
+#6.
+tidy_list.delete("salmon")
+puts tidy_list
