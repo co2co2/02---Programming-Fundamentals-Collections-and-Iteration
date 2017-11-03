@@ -1,30 +1,27 @@
+
+#1
 students = {
   :cohort1 => 34,
   :cohort2 => 42,
   :cohort3 => 22}
-
-def cohort_show (n)
+#2
+def cohort_display (n)
   n.each { |k,v| puts "#{k}: #{v}students"}
 end
-puts cohort_show(students)
-
+puts cohort_display(students)
+#3
 students[:cohort4] = 43
-
+#4
 puts students.keys
-
-students = {
-  :cohort1 => 34,
-  :cohort2 => 42,
-  :cohort3 => 22}
-
-def cohort_show (n)
-  n.each { |k,v| puts "#{k}: #{v}students"}
+#5
+students.map { |k, v| puts [k] => (v*1.05).to_i}
+#6
+students.delete(:cohort2)
+puts students
+#7
+sum  = 0
+students.each_value do |v|
+  sum += v
 end
-puts cohort_show(students)
-
-students[:cohort4] = 43
-
-puts students.keys
-
-new_value = students.each {|k,v| v + v* 0.05 }
-puts cohort_show(new_value)
+puts sum
+#8
